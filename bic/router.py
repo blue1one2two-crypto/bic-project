@@ -30,7 +30,7 @@ class BicRouter:
             "max_tokens": 4096
         }
         
-        # 实现 Thinking Budget 逻辑
+        # 1. 实现 Thinking Budget 逻辑
         if model_cfg.thinking_enabled:
             # 针对 Anthropic / OpenRouter 的标准参数
             params["thinking"] = {
@@ -40,6 +40,16 @@ class BicRouter:
             # 推理模型通常需要更高的总 Token 限制
             params["max_tokens"] = max(params["max_tokens"], model_cfg.thinking_budget + 1024)
             
+        # 2. 注入“分片蒸馏”与“元数据对齐”逻辑 (生蛋理论核心)
+        if model_cfg.distilled_history:
+            # 递归式压缩的历史摘要 (Recursive History Compression)
+            params["system_prompt_appendix"] = f"\n\n[Recursive History Compression]:\n{model_cfg.distilled_history}"
+            
+        if model_cfg.hard_constraints:
+            # 标准化元数据带来的“零成本对齐” (Zero-Shot Alignment)
+            constraints_str = json.dumps(model_cfg.hard_constraints, indent=2, ensure_ascii=False)
+            params["system_prompt_appendix"] = params.get("system_prompt_appendix", "") + f"\n\n[Zero-Shot Alignment - Hard Constraints]:\n{constraints_str}"
+
         return params
 
     def route(self, task_complexity: str) -> str:

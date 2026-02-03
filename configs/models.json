@@ -10,6 +10,11 @@
         "model_name": "qwen/qwen3-235b-thinking",
         "provider": "OpenRouter",
         "thinking_enabled": true,
-        "thinking_budget": 4000
+        "thinking_budget": 4000,
+        "distilled_history": "已完成对 T520 的初步诊断，核心瓶颈在于 SSH 隧道未打通。",
+        "hard_constraints": {
+            "style": "Sovereign-Logic",
+            "priority": "High"
+        }
     }
 ]
