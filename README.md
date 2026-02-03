@@ -8,10 +8,28 @@ BIC (Birth Integrated Components) 是一个基于 **“生蛋模式” (Modular 
 
 ## 🌟 核心特性 (Piccolo Powers)
 
-### 1. 🥚 生蛋模式 (Modular Extraction)
+## 🥚 为什么是“生蛋模式”？ (The Core Philosophy)
+
+![Piccolo Birth](./assets/piccolo_egg.png)
+
+### 🚨 行业三痛点与 BIC 的解决方案
+目前的 AI 智能体架构面临三个核心挑战，BIC 通过「传承」而非「携带」来打破僵局：
+
+1. **记忆缺失 (Memory Fragmentation)**：任务拆解后，AI 往往丢失了全局目标的“灵魂”。
+   - **BIC 方案**：每一颗“蛋”都携带逻辑基因，在解耦的同时确保跨节点的目标一致性。
+2. **上下文肥大症 (Context Overflow)**：盲目追求大 Token 窗口会导致关联性坍塌。
+   - **BIC 方案**：通过「生蛋」实现状态数据的硬压缩。Agent 只需要携带最核心的状态种子，而非冗余的历史废话。
+3. **逻辑失联 (Logical Disconnection)**：大文本删除/截断导致信息变成孤岛。
+   - **BIC 方案**：模块化传承确保了逻辑链条的完整性，即便基础硬件或模型切换，核心意志依然能够延续。
+
+---
+
+## 🌟 核心特性 (Piccolo Powers)
+
+### 1. 🥚 动态生蛋模块 (Modular Extraction)
 仿照那美克星人的无性繁殖。你可以通过配置文件快速“吐出”一个新的子 Agent 节点，而无需修改核心代码。
 *   **解耦**: 逻辑归于代码，行为归于数据。
-*   **扩展**: 像比克大魔王生产魔族部下一样，快速生成针对特定领域的子节点。
+*   **意志传承**: 像比克大魔王生产魔族部下一样，快速生成针对特定领域的子节点。
 
 ### 2. 🧠 思考预算 (Thinking Budget)
 针对 Gemini 2.0/Thinking 型模型的深度推理控制。
