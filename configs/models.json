@@ -1,0 +1,15 @@
+[
+    {
+        "display_name": "比克 (Ollama Qwen)",
+        "model_name": "qwen2.5-7b",
+        "provider": "Ollama",
+        "thinking_enabled": false
+    },
+    {
+        "display_name": "那美克星大长老 (Thinking model)",
+        "model_name": "qwen/qwen3-235b-thinking",
+        "provider": "OpenRouter",
+        "thinking_enabled": true,
+        "thinking_budget": 4000
+    }
+]
